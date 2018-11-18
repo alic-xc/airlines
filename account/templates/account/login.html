@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    {% if message %}
+      {{ message }}
+    {% endif %}
+    <form class="" action="{% url 'login' %}" method="post">
+      <input type="text" name="username" value="">
+      <input type="password" name="password" value="">
+      <button type="submit" name="button">Submit</button>
+      {% csrf_token %}
+    </form>
+  </body>
+</html>
